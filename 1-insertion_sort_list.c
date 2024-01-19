@@ -13,6 +13,9 @@ void insertion_sort_list(listint_t **list)
 	listint_t *current;
 	listint_t *previous;
 
+	if (!list || !(*list) || !(*list)->next)
+		return;
+
 	while (p != NULL)
 	{
 		previous = p->prev;
