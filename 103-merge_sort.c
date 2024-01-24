@@ -17,19 +17,19 @@ void merge_sort(int *array, size_t size)
 		return;
 
 	p = malloc(sizeof(int) * size);
-	s = size - size/2;
-	half = array + size/2;
-	merge_sort(array, size/2);
+	s = size - size / 2;
+	half = array + size / 2;
+	merge_sort(array, size / 2);
 	merge_sort(half, s);
 
 	printf("Merging...\n[left]: ");
-	print_array(array, size/2);
+	print_array(array, size / 2);
 	printf("[right]: ");
 	print_array(half, s);
 	printf("[Done]: ");
 	for (i = 0; i < size; i++)
 	{
-		if (k >= size/2 || (j < s && array[k] > half[j]))
+		if (k >= size / 2 || (j < s && array[k] > half[j]))
 		{
 			p[i] = half[j];
 			j++;
